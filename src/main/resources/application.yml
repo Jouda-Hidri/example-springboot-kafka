@@ -8,3 +8,6 @@ spring:
 
 topic:
   boot: boot.t
+logging:
+  level: 
+    com.codenotfound.kafka: DEBUG

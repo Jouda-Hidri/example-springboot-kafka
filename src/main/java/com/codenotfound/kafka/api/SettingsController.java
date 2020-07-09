@@ -11,6 +11,8 @@ import com.codenotfound.kafka.producer.Sender;
 
 @RestController
 public class SettingsController {
+	
+	// curl -XPOST -H "Content-type: application/json" -d '{"name": "first setup"}' 'http://localhost:8080/settings'
 
 	@Autowired
 	Sender sender;
@@ -19,7 +21,7 @@ public class SettingsController {
 	@PostMapping("/settings")
 	public void create(@RequestBody Setting setting) {
 		sender.send("boot.t", setting.toString());
-		//todo params: Boolean autocommit
+		// todo params: Boolean autocommit
 	}
 
 }
